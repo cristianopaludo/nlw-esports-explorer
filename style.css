@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #FFF;
+  
+  background-image: url("./assets/bg.jpg");
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #121214;
+}
+
+header div {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  margin-top: 32px;
+
+  border-radius: 50%;
+  padding: 4px;
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+
+  transition: scale 0.3s;
+  animation: fromTop 1s backwards;
+}
+
+header div:hover {
+  scale: 1.1;
+}
+
+header div img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 580px;
+  width: 90%;
+
+  margin: 32px auto;
+}
+
+main section:nth-child(1) {
+  animation: fromLeft 1s backwards;
+}
+
+main section:nth-child(2) {
+  animation: fromLeft 1s 0.2s backwards;
+}
+
+main section:nth-child(3) {
+  animation: fromLeft 1s 0.4s backwards;
+}
+
+section {
+  padding-top: 4px;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+}
+
+section div {
+  padding: 32px;
+  padding-top: 24px;
+  line-height: 160%;
+  
+  background-color: #2A2634;
+  border-radius: 8px;
+}
+
+section h2 {
+  letter-spacing: -0.47px;
+}
+
+section p {
+  color: #A1A1AA;
+  letter-spacing: -0.18px;
+}
+
+ul {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+
+  list-style: none;
+}
+
+li {
+  border-radius: 8;
+
+  transition: scale 0.3s;
+}
+
+li:hover {
+  scale: 1.1;
+}
+
+.games-list img {
+  width: 90px;
+  border-radius: 8px;
+}
+
+.channel-list img {
+  width: 70px;
+  border: 1px solid #443E54;
+  border-radius: 50%;
+}
+
+/* Animations */
+@keyframes fromTop {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromLeft {
+  from { 
+    transform: translateX(-60px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
